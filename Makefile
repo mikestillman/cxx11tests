@@ -10,15 +10,12 @@ CXXFLAGS = -std=c++11 -stdlib=libc++
 LOADLIBES = -lc++
 endif
 
-CC = gcc
-CXX = g++
-LOADLIBES = -lstdc++
-CXXFLAGS = -std=c++0x -O2 -Wall -Werror
-
-all: test-auto test-range
+all: test-auto test-range hello-thread
 
 test-auto: test-auto.o
 test-range : test-range.o
+hello-thread: hello-thread.o
 
 clean:
-	rm -rf *.o test-auto test-range
+	rm -rf *.o test-auto test-range hello-thread
+
